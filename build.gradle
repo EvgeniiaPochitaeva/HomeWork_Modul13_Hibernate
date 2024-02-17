@@ -1,0 +1,50 @@
+buildscript {
+    dependencies {
+        classpath 'com.h2database:h2:2.2.220'
+    }
+}
+
+
+plugins {
+    id 'java'
+    id "org.flywaydb.flyway" version "8.5.7"
+}
+
+flyway {
+    url = 'jdbc:h2:C:/Users/eshap/IdeaProjects/HomeWork_Modul13_Hibernate'
+    user = ''
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:31.0.1-jre'
+
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    implementation 'com.h2database:h2:2.2.220'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+
+
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+    implementation 'org.hibernate.orm:hibernate-core:6.4.3.Final'
+
+    // https://mvnrepository.com/artifact/org.flywaydb/flyway-mysql
+    implementation 'org.flywaydb:flyway-core:8.5.7'
+
+
+
+}
+
